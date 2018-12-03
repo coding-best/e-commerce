@@ -19,6 +19,14 @@
         </div>
       </div>
     </div>
+
+    <!-- 分页 -->
+    <div class="paging">
+      <div class="prevPage"><p>上一页</p></div>
+      <div class="pageNumber"><p>1</p></div>
+      <div class="pageNumber"><p>2</p></div>
+      <div class="nextPage"><p>下一页</p></div>
+    </div>
   </div>
 </template>
 
@@ -31,42 +39,42 @@ export default {
         img: require('../../assets/home/goods-01.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }, {
         img: require('../../assets/home/goods-02.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }, {
         img: require('../../assets/home/goods-03.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }, {
         img: require('../../assets/home/goods-04.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }, {
         img: require('../../assets/home/goods-05.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }, {
         img: require('../../assets/home/goods-06.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }, {
         img: require('../../assets/home/goods-07.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }, {
         img: require('../../assets/home/goods-08.jpg'),
         price: 299,
         trading: 402,
-        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟...'
+        desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
       }]
     }
   }
@@ -133,6 +141,12 @@ export default {
         padding-left: 4px;
         p {
           text-align: left;
+          font-size: 14px;
+           overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
         }
       }
     }
@@ -144,6 +158,35 @@ export default {
         transform: translate(10px, -10px);
         box-shadow: 0 0 16px #b1b1b1;
       }
+    }
+  }
+  .paging {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .prevPage, .nextPage {
+    width: 74px;
+    height: 42px;
+    border: 1px solid rgb(228, 234, 236);
+    p {
+      text-align: center;
+      line-height: 42px;
+      font-size: 14px;
+    }
+  }
+  .nextPage {
+    border-left: none;
+  }
+  .pageNumber {
+    width: 40px;
+    height: 42px;
+    border: 1px solid rgb(228, 234, 236);
+    border-left: none;
+    p {
+      text-align: center;
+      line-height: 42px;
+      font-size: 14px;
     }
   }
 }
