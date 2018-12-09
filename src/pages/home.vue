@@ -6,7 +6,7 @@
     <SeriesProducts />
     <Award />
     <AwardList />
-    <foot />
+    <Foot />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ import HomeGoods from '../components/home/HomeGoods'
 import SeriesProducts from '../components/home/SeriesProducts'
 import Award from '../components/home/Award'
 import AwardList from '../components/home/AwardList'
-import foot from '../components/foot'
+import Foot from '../components/Foot'
 export default {
   name: 'home',
   data () {
@@ -32,7 +32,7 @@ export default {
     SeriesProducts,
     Award,
     AwardList,
-    foot
+    Foot
   }
 }
 </script>

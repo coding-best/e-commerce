@@ -1,38 +1,29 @@
 <template>
-  <div class="foot">
+  <footer class="foot">
     <div class="content">
-      <div class="left">
-        <div class="left-item">
-          <p>公众号</p>
-          <img src="../assets/home/qrcode01.png" alt="qrcode" width="86" height="86">
-        </div>
-        <div class="left-item">
-          <p>小程序</p>
-          <img src="../assets/home/qrcode02.png" alt="qrcode" width="86" height="86">
-        </div>
+      <div class="nav-list">
+        <p>关于我们</p>
+        <p>联系我们</p>
+        <p>解决方案</p>
+        <p>亚马逊</p>
       </div>
-      <div class="right">
-        <div class="text">
-          <p>联系我们</p>
-        </div>
-        <div class="text">
-          <img src="../assets/home/phone_icon.png" alt="" width="20" height="18">
-          <p>0755-26969828</p>
-        </div>
-        <div class="text">
-          <img src="../assets/home/mail_icon.png" alt="" width="17" height="12">
-          <p>583175694@qq.com</p>
-        </div>
-        <div class="text">
-          <img src="../assets/home/address_icon.png" alt="" width="14" height="18">
-          <p>深圳市南山区桃源村</p>
-        </div>
-        <a href="" class="text">
-            <p>Copyright © 2017-2018 桃源村 粤ICP备16113487号-2</p>
-        </a>
+      <div class="social-list">
+        <img src="../assets/home/icon-google.png" alt="" width="16" height="16">
+        <img src="../assets/home/icon-Twitter.png" alt="" width="16" height="16">
+        <img src="../assets/home/icon-facebook.png" alt="" width="16" height="16">
+        <img src="../assets/home/icon-ins.png" alt="" width="16" height="16">
+      </div>
+      <div class="made-in">
+        <p>Made in China</p>
+        <img src="../assets/home/China.png" alt="" width="18" height="12">
+      </div>
+      <div class="registered-trademark">
+        <p>© 2018 Stack Inc.</p>
+        <p>Privacy Policy</p>
+        <p>Legal</p>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -47,58 +38,55 @@ a {
 .foot {
   position: relative;
   width: 100%;
-  height: 241px;
-  background: rgba(#ca0c26, .8);
+  height: 322px;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .content {
-    width: 739px;
-    margin: 0 auto;
+    width: 1140px;
+    height: 184px;
+    background-color: #FFF;
     display: flex;
-    justify-content: space-between;
-    transform: translateX(10%);
-    .left {
-      width: 222px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .nav-list {
       display: flex;
-      justify-content: space-between;
-      .left-item {
-        p {
-          font-size: 14px;
-          font-family: PingFangSC-Regular;
-          font-weight: 400;
-          color: rgba(254, 255, 255, 1);
-          margin-bottom: 32px;
-          margin-top: 60px;
-        }
+      justify-content: center;
+      margin-bottom: 50px;
+      p {
+        padding: 0 20px;
+        color: #666666;
+        font-size: 14px;
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
       }
     }
-    .right {
-      width: 400px;
-      margin-top: 60px;
-      .text {
-        display: flex;
-        justify-content: flex-start;
-        margin-bottom: 8px;
-        img {
-          margin-right: 10px;
-        }
-        p {
-          font-size: 12px;
-          font-family: PingFangSC-Regular;
-          font-weight: 400;
-          color: rgba(254, 255, 255, 1);
-          text-align: left;
-        }
+    .social-list {
+      img {
+        padding: 0 10px;
       }
-      .text:first-child {
-        margin-bottom: 28px;
-        p {
-          font-size: 14px;
-        }
+    }
+    .made-in {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 13px;
+      p {
+        font-size: 12px;
+        color: #666666;
+        margin-right: 6px;
       }
-      .text:nth-child(4) {
-        margin-bottom: 28px;
-        p {
-          font-size: 14px;
-        }
+    }
+    .registered-trademark {
+      display: flex;
+      justify-content: center;
+      p {
+        padding: 0 10px;
+        font-size: 12px;
+        color: #666666;
+        opacity: .5;
       }
     }
   }

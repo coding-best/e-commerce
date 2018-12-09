@@ -4,13 +4,13 @@
     <ProductBanner />
     <Filters />
     <ProductList />
-    <!-- <foot /> -->
+    <Foot />
   </div>
 </template>
 
 <script>
 import Header from '../components/Header'
-import foot from '../components/foot'
+import Foot from '../components/Foot'
 import ProductBanner from '../components/product/ProductBanner'
 import Filters from '../components/product/Filters'
 import ProductList from '../components/product/ProductList'
@@ -23,7 +23,7 @@ export default {
   },
   components: {
     Header,
-    foot,
+    Foot,
     ProductBanner,
     Filters,
     ProductList

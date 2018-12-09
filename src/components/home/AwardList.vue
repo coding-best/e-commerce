@@ -57,7 +57,7 @@ h2 {
 
 .award-list {
   margin-top: 80px;
-  margin-bottom: 80px;
+  z-index: 9;
   .award-list-ul {
     width: 1150px;
     max-width: 1336px;

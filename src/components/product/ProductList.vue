@@ -23,8 +23,9 @@
     <!-- 分页 -->
     <div class="paging">
       <div class="prevPage"><p>上一页</p></div>
-      <div class="pageNumber"><p>1</p></div>
-      <div class="pageNumber"><p>2</p></div>
+      <div class="pageNumber" :class="currentPage === index + 1 && 'active'" v-for="(item, index) in paging" :key="index" @click="checkoutPage(index + 1)">
+        <p>{{index + 1}}</p>
+      </div>
       <div class="nextPage"><p>下一页</p></div>
     </div>
   </div>
@@ -75,7 +76,14 @@ export default {
         price: 299,
         trading: 402,
         desc: '时尚创意闹钟LED电子钟儿童智能木头时钟时尚创意闹钟LED电子钟儿童智能木头时钟...'
-      }]
+      }],
+      paging: 5,
+      currentPage: 1
+    }
+  },
+  methods: {
+    checkoutPage (e) {
+      this.currentPage = e
     }
   }
 }
@@ -164,29 +172,47 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .prevPage, .nextPage {
-    width: 74px;
-    height: 42px;
-    border: 1px solid rgb(228, 234, 236);
-    p {
-      text-align: center;
-      line-height: 42px;
-      font-size: 14px;
+    margin-top: 20px;
+    .prevPage, .nextPage {
+      width: 74px;
+      height: 42px;
+      border: 1px solid rgb(228, 234, 236);
+      cursor: pointer;
+      transition: all .2s ease;
+      p {
+        text-align: center;
+        line-height: 42px;
+        font-size: 14px;
+      }
     }
-  }
-  .nextPage {
-    border-left: none;
-  }
-  .pageNumber {
-    width: 40px;
-    height: 42px;
-    border: 1px solid rgb(228, 234, 236);
-    border-left: none;
-    p {
-      text-align: center;
-      line-height: 42px;
-      font-size: 14px;
+    .nextPage {
+      border-left: none;
+    }
+    .pageNumber {
+      width: 40px;
+      height: 42px;
+      border: 1px solid rgb(228, 234, 236);
+      border-left: none;
+      cursor: pointer;
+      transition: all .4s ease;
+      p {
+        text-align: center;
+        line-height: 42px;
+        font-size: 14px;
+        font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Roboto,Arial,sans-serif;
+      }
+    }
+    .pageNumber:hover, .prevPage:hover, .nextPage:hover {
+      background-color: #ca0c26;
+      transition: all .4s ease;
+      color: #FFF;
+      border-color: #ca0c26;
+    }
+    .active {
+      background-color: #ca0c26;
+      transition: all .4s ease;
+      color: #FFF;
+      border-color: #ca0c26;
     }
   }
 }
