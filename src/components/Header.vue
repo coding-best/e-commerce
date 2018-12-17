@@ -153,7 +153,7 @@ a {
       display: flex;
       justify-content: center;
       .nav-list {
-        width: 630px;
+        width: 650px;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -161,6 +161,7 @@ a {
         li {
           cursor: pointer;
           height: 100%;
+          width: 86px;
           color: rgb(34, 34, 34);
           font-size: 14px;
           font-family: FuturaLT-Heavy, NotoSansCJKsc-demilight,

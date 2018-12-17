@@ -72,12 +72,6 @@ export default {
 .swiper-slide {
   background-size: cover;
   background-position: center;
-  // &.slide-1 {
-  //   background-image: url("../../assets/home/product-1.jpg");
-  // }
-  // &.slide-2 {
-  //   background-image: url("../../assets/home/product-2.jpg");
-  // }
 }
 .gallery-top {
   height: 80% !important;

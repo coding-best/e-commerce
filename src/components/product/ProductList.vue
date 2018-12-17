@@ -8,15 +8,17 @@
 
     <!-- 产品展示 -->
     <div class="content">
-      <div class="content-item" v-for="(item, index) in list" :key="index" >
-        <img  class="content-item-img" :src="item.img" alt="商品" >
-        <div class="content-price">
-          <p>￥{{item.price}}</p>
-          <p>{{item.trading}}人付款</p>
-        </div>
-        <div class="content-desc">
-          <p>{{item.desc}}</p>
-        </div>
+      <div class="content-item" v-for="(item, index) in list" :key="index">
+        <router-link to="showProduct">
+          <img  class="content-item-img" :src="item.img" alt="商品" >
+          <div class="content-price">
+            <p>￥{{item.price}}</p>
+            <p>{{item.trading}}人付款</p>
+          </div>
+          <div class="content-desc">
+            <p>{{item.desc}}</p>
+          </div>
+        </router-link>
       </div>
     </div>
 
@@ -82,6 +84,7 @@ export default {
     }
   },
   methods: {
+    // 翻页
     checkoutPage (e) {
       this.currentPage = e
     }
@@ -123,6 +126,7 @@ export default {
       margin: 0 16px;
       margin-top: 20px;
       transition: all .6s ease 0s;
+      cursor: pointer;
       .content-item-img {
         max-width: 300px;
         max-height: 300px;

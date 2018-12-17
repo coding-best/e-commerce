@@ -5,14 +5,16 @@
     </div>
     <div class="goods">
       <div class="goods-item" v-for="(item, index) in goodsItem" :key="index">
-        <img class="goods-item-image" :src="item.img" alt="shop">
-        <div class="goods-item-title">
-          <p>{{item.title}}</p>
-        </div>
-        <div class="goods-item-price">
-          <p>${{item.minPrice}}</p>
-          <p>${{item.maxPrice}}</p>
-        </div>
+        <router-link to="showProduct">
+          <img class="goods-item-image" :src="item.img" alt="shop">
+          <div class="goods-item-title">
+            <p>{{item.title}}</p>
+          </div>
+          <div class="goods-item-price">
+            <p>${{item.minPrice}}</p>
+            <p>${{item.maxPrice}}</p>
+          </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -87,6 +89,7 @@ export default {
     margin-top: 50px;
     max-width: 1336px;
     .goods-item {
+      cursor: pointer;
       max-width: 300px;
       max-height: 380px;
       width: auto;
